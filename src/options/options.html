@@ -3,11 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Repo Glance Options</title>
+    <title>RepoGlance Settings</title>
     <link rel="stylesheet" href="options.css" />
   </head>
   <body>
-    <h1>Repo Glance Options</h1>
+    <div class="container">
+      <h1>RepoGlance Settings</h1>
+
+      <form id="settings-form">
+        <div class="field">
+          <label for="claude-api-key">Claude API Key <span class="required">*</span></label>
+          <p class="help-text">Get your API key from <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a></p>
+          <div class="input-group">
+            <input type="password" id="claude-api-key" required placeholder="sk-ant-..." />
+            <button type="button" class="toggle-btn" data-target="claude-api-key">Show</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="github-token">GitHub Personal Access Token <span class="optional">(optional)</span></label>
+          <p class="help-text">Increases rate limit from 60 to 5,000 requests/hour. Create one at <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">github.com/settings/tokens</a></p>
+          <div class="input-group">
+            <input type="password" id="github-token" placeholder="ghp_..." />
+            <button type="button" class="toggle-btn" data-target="github-token">Show</button>
+          </div>
+        </div>
+
+        <button type="submit" class="save-btn">Save Settings</button>
+        <p id="status-message" class="status-message" hidden></p>
+      </form>
+    </div>
+
     <script type="module" src="options.ts"></script>
   </body>
 </html>
