@@ -1,4 +1,5 @@
 import type { RepoContext, Response } from "./types";
+import "./sidebar/sidebar"; // Initialize sidebar (Shadow DOM injection + event listeners)
 
 // Non-repo GitHub paths to exclude
 const EXCLUDED_PATHS = new Set([
