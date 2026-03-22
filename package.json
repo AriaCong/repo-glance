@@ -30,7 +30,10 @@
   "devDependencies": {
     "@types/chrome": "^0.1.38",
     "@types/jest": "^30.0.0",
+    "fake-indexeddb": "^6.2.5",
     "jest": "^29.7.0",
-    "ts-jest": "^29.4.6"
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2"
   }
 }
